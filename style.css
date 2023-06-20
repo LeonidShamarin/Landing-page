@@ -1,0 +1,268 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Inter', sans-serif;
+    color: #292929;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+
+
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 64px 120px;
+    background-image: url(images/header-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* #region pryklad */
+/* #endregion */
+.header__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title {
+    margin-top: 40px;
+    margin-bottom: 0;
+
+    font-size: 48px;
+    line-height: 100%;
+    font-style: italic;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+
+}
+
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 500ms;
+    height: 100vh;
+    padding: 64px 120px;
+    box-sizing: border-box;
+    background-color: #E8EFF9;
+}
+
+.menu:target {
+    transform: translateX(-0%);
+}
+
+
+.menu__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.nav__link {
+    color: #292929;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Підкреслення */
+/* .nav__link:hover {
+    text-decoration: underline;
+} */
+
+.nav__link {
+    position: relative;
+}
+
+.nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 22%;
+    border-bottom: 3px solid transparent;
+    /* Початково підкреслення невидиме */
+    transition: border-bottom-color 0.3s ease;
+    /* Плавна анімація для зміни кольору підкреслення */
+}
+
+.nav__link:hover::after {
+    border-bottom-color: #292929;
+    /* Зміна кольору підкреслення при наведенні */
+}
+
+
+
+.main {
+    padding: 120px;
+    background: white;
+}
+
+@media ( max-width: 640px) {
+    .main {
+        padding: 40px;
+    }
+}
+
+.recommended {
+    margin-bottom: 120px;
+}
+
+.recommended_title {
+    margin-top: 0;
+    margin-bottom: 64px;
+    font-size: 48px;
+    line-height: 100%;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: -1.5px;
+}
+
+.recomended__products {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+@media ( max-width: 640px) { 
+    .recomended__products {
+        flex-direction: column;
+    }
+}
+
+
+.product_photo {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.product_title {
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.product {
+    flex-basis: 324px;
+}
+
+
+.product_category {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.product_price {
+    margin: 0;
+    font-weight: bold;
+}
+
+.categories {
+    max-width: 1020px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.categories__titles {
+    margin-top: 0;
+    margin-bottom: 64px;
+    font-size: 48px;
+    line-height: 100%;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: -1.5px;
+}
+
+.category {
+    margin-bottom: 64px;
+}
+
+.categories__photos {
+    display: flex;
+    gap: 3%;
+    margin-bottom: 16px;
+}
+
+.category__title {
+    margin: 0;
+}
+
+
+.photo-wide {
+    width: 65%;
+}
+
+.photo-square {
+    width: 32%;
+}
+
+.how-to-buy {
+    max-width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+}
+
+.how-to-buy__title {
+    flex-basis: 50%;
+    margin-top: 0;
+    margin-bottom: 64px;
+    font-size: 48px;
+    line-height: 100%;
+    font-weight: bold;
+    letter-spacing: -1.5px;
+}
+
+.how-to-buy__content {
+    flex-basis: 50%;
+}
+
+.how-to-buy__benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    z-index: -1;
+    height: 460px;
+    background-image: url(images/footer-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
